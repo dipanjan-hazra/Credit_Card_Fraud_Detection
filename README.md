@@ -23,12 +23,3 @@ Machine Learning–based Credit Card Fraud Detection system with React frontend,
 
 -</ol>
 
-
-
-
-
-
-
-
-
-<h1>On  UI Or Frontend </h1>
