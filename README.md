@@ -5,7 +5,7 @@ Machine Learning–based Credit Card Fraud Detection system with React frontend,
 
 <h2>Team  Description</h2>
 <ul>
-<li><p><b>Team-Lead</b> Sk Mijanur Rahaman</p></li>
+<li><p><b>Team-Lead</b> - Sk Mijanur Rahaman</p></li>
 <li><p>Rohit Pathak</p></li>
 <li><p>Sk Tanvir Ahamed</p></li>
 <li><p>Dipanjan Hazra</p></li>
