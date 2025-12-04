@@ -10,13 +10,16 @@ Machine Learning–based Credit Card Fraud Detection system with React frontend,
 <li><p>Sk Tanvir Ahamed</p></li>
 <li><p>Dipanjan Hazra</p></li>
 </ul>
+
 <hr>
-<h2>Work Flow </h2>
 
-<ol type="a">
-    <li>Data - For  Train</li>
-    <li>Model</li>
-    <li>BackEnd</li>
-    <li>UI</li>
+-<h2>Work Flow </h2>
 
-</ol>
+-<ol type="a">
+-    <li>Data - For  Train</li>
+-    <li>Model</li>
+-    <li>BackEnd</li>
+-    <li>UI</li>
+
+-</ol>
+
