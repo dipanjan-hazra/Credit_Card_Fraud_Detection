@@ -3,6 +3,7 @@ import joblib
 import pandas as pd
 from Api.Schemas import input_data
 
+Version = "1.0.0"
 
 app= FastAPI( 
             title="Credit Card Fraud Detection API",
@@ -24,9 +25,15 @@ except Exception as e:
 
 @app.get("/")
 def root():
-    return {"message": "API running"}
+    return {"message": "Credit Card Fraud Detection Api"}
 
-
+@app.get("/health")
+def health():
+    return {
+        "Status" : "Ok",
+        "Model_Loaded" : model is not None,
+        "Version" : Version
+    }
 #------------------------------------------------------
         #Prediction Endpoint
 #-------------------------------------------------------
@@ -37,12 +44,17 @@ def predict(data : input_data):
         data_dict = data.model_dump()
         df = pd.DataFrame([data_dict])
         
-        prob = model.predict_proba(df)[0][1]
+        prob = model.predict_proba(df)[0]
         prediction = 1 if prob >= Threshold else 0
+        confidence = max(prob)
+        class_labels = ['0','1']
+        
+        class_prob = dict(zip(class_labels,map(lambda p : round(p,4),prob)))
         
         return {
             "prediction": prediction,
-            "Fraud_Probability" : float(prob),
+            "Confidence" : round(confidence,4),
+            "Class Probabilities" : class_prob,
             "ThresHold Used":float(Threshold)
         }
     except Exception as e:
